@@ -33,12 +33,12 @@
         </li>
         <li class="header">MENU</li>
         <li>
-          <a href="">
+          <a href="{{ route('kategori.index') }}">
           <i class="fa fa-th"></i> <span>Ketegori</span>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="{{ route('produk.index') }}">
           <i class="fa fa-cart-plus" aria-hidden="true"></i><span>Produk</span>
           </a>
         </li>
