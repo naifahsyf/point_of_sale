@@ -22,6 +22,8 @@ Route::group(['middleware'=> 'auth'], function(){
 
     Route::get('/produk/data', [ProdukController::class, 'data'])->name('produk.data');
     Route::resource('/produk', ProdukController::class);
+    Route::post('/produk', ProdukController::class);
+    
 });
 
 
