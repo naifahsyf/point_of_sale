@@ -1,10 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\KategoriController;
-use App\Http\Controllers\ProdukController;
+// use App\Http\Controllers\KategoriController;
+// use App\Http\Controllers\ProdukController;
 
-Route::get('/', fn () => redirect()->route('login'));
+Route::get('/', function () {
+    return redirect()->route('login');
+});
 
 Route::middleware([
     'auth:sanctum',
@@ -22,8 +24,7 @@ Route::group(['middleware'=> 'auth'], function(){
 
     Route::get('/produk/data', [ProdukController::class, 'data'])->name('produk.data');
     Route::resource('/produk', ProdukController::class);
-    Route::post('/produk', ProdukController::class);
-    Route::post('/produk-test', ProdukController::class);
+   
     
 });
 
